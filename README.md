@@ -1,2 +1,1 @@
-# leafgen-docs.github.io
-Documentation website for the LeafGen methods
+A repository for the documentation website of [LeafGen](https://github.com/InverseTampere/leafgen). See the docs at [https://leafgen-docs.github.io](https://leafgen-docs.github.io).

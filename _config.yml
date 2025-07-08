@@ -1,0 +1,47 @@
+title: LeafGen Documentation
+description: Documentation for the LeafGen foliage generation method
+theme: "just-the-docs"
+remote_theme: "pmarsceill/just-the-docs"
+
+
+url: https://leafgen-docs.github.io/
+
+
+ # Aux links for the upper right navigation
+aux_links:
+  "LeafGen on GitHub":
+    - "https://github.com/InverseTampere/leafgen"
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true
+
+# Enable or disable the side/mobile menu globally
+# Nav menu can also be selectively enabled or disabled using page variables or the minimal layout
+nav_enabled: true
+
+# For copy button on code
+enable_copy_code_button: true
+
+# Render math formulae as in latex
+mathjax: true
+includes:
+  - head_custom.html
+  
+# Callouts
+callouts_level: quiet # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
+
