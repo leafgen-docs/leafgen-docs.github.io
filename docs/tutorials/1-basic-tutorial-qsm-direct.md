@@ -124,7 +124,7 @@ The first input is the struct containing the distribution definitions and the se
 {: .note} 
 In the case of sructural-variable-dependent LOD or LSD, the shape of the distribution changes with respect to structural variable values. Therefore, when visualizing the target distributions, the user has to choose that for which part of the tree the distributions are visualized.
 
-The visualization of the target distributions provides the following figure:
+The visualization of the target distributions provides a figure showing the distributions we just defined above.
 
 <img src="/assets/images/target-visualization.png" width="500" height="500" />
 
