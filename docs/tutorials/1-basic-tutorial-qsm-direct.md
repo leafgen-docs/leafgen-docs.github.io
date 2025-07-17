@@ -119,7 +119,7 @@ Before starting the leaf generation we can visualize the target distributions wi
 visualize_target_distributions(TargetDistributions,[0 0 0]);
 ```
 
-The first input is the struct containing the distribution definitions and the second input is a vector for the point we want to visualize the distributions in the structural variable space. In this case, all of our leaf distributions are stationary for the whole tree and do not vary depending on the structural variables, so we can put any point (in this case `[0 0 0]`) as the second input.
+The first input is the struct containing the distribution definitions and the second input is a vector for the structural variable coordinates of the point in which we want to visualize the distributions. In this case, all of our leaf distributions are stationary for the whole tree and do not vary depending on the structural variables, so we can put any point (in this case `[0 0 0]`) as the second input.
 
 {: .note} 
 In the case of sructural-variable-dependent LOD or LSD, the shape of the distribution changes with respect to structural variable values. Therefore, when visualizing the target distributions, the user has to choose that for which part of the tree the distributions are visualized.
