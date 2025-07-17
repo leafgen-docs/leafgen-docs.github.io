@@ -113,6 +113,21 @@ The `dTypeLSD` and `fun_pLSD` fields define the distribution type and parameter 
 {: .note } 
 The parameters of LOD inclination and azimuth angle distributions as well as LSD have to be given as function handles with three variables: relative height, relative branch distance, and compass direction. This holds even in the case they are constant or empty.
 
+Before starting the leaf generation we can visualize the target distributions with the `visualize_target_distributions` function:
+
+```matlab
+visualize_target_distributions(TargetDistributions,[0 0 0]);
+```
+
+The first input is the struct containing the distribution definitions and the second input is a vector for the point we want to visualize the distributions in the structural variable space. In this case, all of our leaf distributions are stationary for the whole tree and do not vary depending on the structural variables, so we can put any point (in this case `[0 0 0]`) as the second input.
+
+{: .note} 
+In the case of sructural-variable-dependent LOD or LSD, the shape of the distribution changes with respect to structural variable values. Therefore, when visualizing the target distributions, the user has to choose that for which part of the tree the distributions are visualized.
+
+The visualization of the target distributions provides the following figure:
+
+<img src="/assets/images/target-visualization.png" width="500" height="500" />
+
 ## Setting target leaf area
 
 The target leaf area is set in square meters to a variable named `totalLeafArea`:
