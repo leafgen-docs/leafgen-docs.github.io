@@ -126,7 +126,7 @@ plot3([0 0],[0 0],[min(ptCloud(:,3)) max(ptCloud(:,3))],'c-', ...
 axis equal, axis off, view(45,0)
 ```
 
-<img src="assets\images\point-cloud-sampling-as-visualization.png" width="250" height="250" />
+<img src="assets/images/point-cloud-sampling-as-visualization.png" width="250" height="250" />
 
 From the produced image we can see, that the stem center is inside the alpha shape (except for the very top, which is ok).
 
@@ -199,6 +199,6 @@ linkaxes([s1 s2 s3 s4])
 
 With this we can see the effect of the point cloud sampling in leaf positions.
 
-<img src="assets\images\point-cloud-sampling.png" width="500" height="500" />
+<img src="assets/images/point-cloud-sampling.png" width="500" height="500" />
 
 [Calders et al. 2022]: https://doi.org/10.5281/zenodo.7307956
