@@ -1,3 +1,10 @@
+---
+title: Mixture models tutorial
+layout: default
+parent: Tutorials
+nav_order: 6
+---
+
 # Mixture model target distribution tutorial
 
 This tutorial demonstrates how to define mixture models for the LADD marginal distributions. The mixture models are combinations of two distributions of the same type, allowing for more diverse and multimodal definitions for LADD. Compared to using only a single distribution and parameters for the definition of a marginal LADD, the mixture model takes in two sets of input parameters and a weighting factor between the two distributions. The mixture model distributions for LADD can be used in all of the the methods: QSM direct, leaf cylinder library, and canopy hull methods.
