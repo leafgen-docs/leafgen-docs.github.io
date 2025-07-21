@@ -93,11 +93,11 @@ Below are figures of the foliage generated with each of the above definitions.
 
 Without mixutre models:
 
-<img src="/assets/images/qsm-direct-3d-visualization.png" width="500" height="500" />
+<img src="/assets/images/qsm-direct-3d-visualization.png" width="250" height="250" />
 
 Using mixture models:
 
-<img src="/assets/images/qsm-direct-3d-visualization-mixture.png" width="500" height="500" />
+<img src="/assets/images/qsm-direct-3d-visualization-mixture.png" width="250" height="250" />
 
 We can also plot the histograms of the LADD marginal distributions
 
