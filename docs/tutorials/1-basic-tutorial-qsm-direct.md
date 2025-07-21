@@ -50,7 +50,7 @@ LeafProperties.triangles = [1 2 3;
 
 In the `LeafProperties.vertices` matrix each row corresponds to a singe vertice point and in the `LeafProperties.triangles` each row contains the row indices of vertices used for the triangles. These matrices define a leaf geometry based on two triangles which looks like this:
 
-<img src="assets/images/tutorials/basic-tutorials/base-geometry-visualization.png" width="250" height="250" />
+<img src="/assets/images/tutorials/basic-tutorials/base-geometry-visualization.png" width="250" height="250" />
 
 {: .note } 
 The absolute dimensions of the leaf base geometry are not important, since the base geometry is scaled to the correct size in the LSD sampling phase. Only the shape of the base geometry is preserved.
@@ -126,7 +126,7 @@ In the case of sructural-variable-dependent LOD or LSD, the shape of the distrib
 
 The visualization of the target distributions provides a figure showing the distributions we just defined above.
 
-<img src="assets/images/tutorials/basic-tutorials/target-visualization.png" width="500" height="500" />
+<img src="/assets/images/tutorials/basic-tutorials/target-visualization.png" width="500" height="500" />
 
 ## Setting target leaf area
 
@@ -185,7 +185,7 @@ zlabel('z')
 
 This produces a 3D figure with green leaves and brown QSM.
 
-<img src="assets/images/tutorials/basic-tutorials/qsm-direct-3d-visualization.png" width="250" height="250" />
+<img src="/assets/images/tutorials/basic-tutorials/qsm-direct-3d-visualization.png" width="250" height="250" />
 
 ## Visualizing leaf distributions
 

@@ -44,7 +44,7 @@ visualize_target_distributions(TargetDistributions,[0 0 0]);
 
 The visualization shows us the following distributions:
 
-<img src="assets/images/tutorials/basic-tutorials/target-visualization.png" width="500" height="500" />
+<img src="/assets/images/tutorials/basic-tutorials/target-visualization.png" width="500" height="500" />
 
 ## Target LADD with mixture models
 
@@ -83,7 +83,7 @@ In this definition for heightwise LADD we use a mixture of beta distribution wit
 
 With these definitions, we get the following visualization:
 
-<img src="assets/images/tutorials/mixture-models-tutorial/target-visualization-mixture.png" width="500" height="500" />
+<img src="/assets/images/tutorials/mixture-models-tutorial/target-visualization-mixture.png" width="500" height="500" />
 
 Here we can see the more detailed marginal LADD distributions (in blue) compared to the previous visualization.
 
@@ -93,18 +93,18 @@ Below are figures of the foliage generated with each of the above definitions.
 
 Without mixutre models:
 
-<img src="assets/images/tutorials/basic-tutorials/qsm-direct-3d-visualization.png" width="500" height="500" />
+<img src="/assets/images/tutorials/basic-tutorials/qsm-direct-3d-visualization.png" width="500" height="500" />
 
 Using mixture models:
 
-<img src="assets/images/tutorials/mixture-models-tutorial/qsm-direct-3d-visualization-mixture.png" width="500" height="500" />
+<img src="/assets/images/tutorials/mixture-models-tutorial/qsm-direct-3d-visualization-mixture.png" width="500" height="500" />
 
 We can also plot the histograms of the LADD marginal distributions
 
 Without mixture models:
 
-<img src="assets/images/tutorials/mixture-models-tutorial/result-ladd-visualization.png" width="700" height="500" />
+<img src="/assets/images/tutorials/mixture-models-tutorial/result-ladd-visualization.png" width="700" height="500" />
 
 With mixture models:
 
-<img src="assets/images/tutorials/mixture-models-tutorial/result-ladd-visualization-mixture.png" width="700" height="500" />
+<img src="/assets/images/tutorials/mixture-models-tutorial/result-ladd-visualization-mixture.png" width="700" height="500" />

@@ -91,7 +91,7 @@ axis equal, axis off, hold off
 
 This generates the foliage on a cylinder and displays a visualization:
 
-<img src="assets/images/tutorials/petiole-direction-and-phyllotaxis-tutorial/leaf-cylinder-uniform.png" width="250" height="250" />
+<img src="/assets/images/tutorials/petiole-direction-and-phyllotaxis-tutorial/leaf-cylinder-uniform.png" width="250" height="250" />
 
 ## Petiole direction distribution on a cylinder
 
@@ -184,7 +184,7 @@ view(-20,30), axis equal, axis off, hold off
 
 This creates the following visualization:
 
-<img src="assets/images/tutorials/petiole-direction-and-phyllotaxis-tutorial/leaf-cylinder-petiole-dir.png" width="500" height="500" />
+<img src="/assets/images/tutorials/petiole-direction-and-phyllotaxis-tutorial/leaf-cylinder-petiole-dir.png" width="500" height="500" />
 
 ## Phyllotaxis pattern on a cylinder
 
@@ -230,7 +230,7 @@ axis equal, axis off, hold off
 
 This creates the following visualization:
 
-<img src="assets/images/tutorials/petiole-direction-and-phyllotaxis-tutorial/leaf-cylinder-phyllotaxis.png" width="250" height="250" />
+<img src="/assets/images/tutorials/petiole-direction-and-phyllotaxis-tutorial/leaf-cylinder-phyllotaxis.png" width="250" height="250" />
 
 ## Applying to QSM direct method
 
@@ -306,7 +306,7 @@ axis equal, axis off
 ```
 This provides us with the following visualization.
 
-<img src="assets/images/tutorials/petiole-direction-and-phyllotaxis-tutorial/petiole-direction-and-phyllotaxis-visualization.png" width="500" height="500" />
+<img src="/assets/images/tutorials/petiole-direction-and-phyllotaxis-tutorial/petiole-direction-and-phyllotaxis-visualization.png" width="500" height="500" />
 
 {: .warning}
 When using a phyllotaxis pattern, sometimes the target leaf area cannot be reached as the pattern limits the amount of leaf area that can be generated on a cylinder. Thus, if the LADD determines a large amount of leaf area for a single cylinder, this cannot be realized and the target is not reached.
