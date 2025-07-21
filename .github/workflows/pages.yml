@@ -6,6 +6,12 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll site to Pages
 
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+
 on:
   push:
     branches: ["main"]
