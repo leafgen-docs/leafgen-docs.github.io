@@ -234,5 +234,5 @@ Leaves.export_geometry('OBJ',true,'leaves_export.obj',precision);
 QSMbc.export('OBJ','qsm_export.obj','Precision',precision);
 ```
 The `precision` parameter defines the number of digits used when writing the geometry to an OBJ file: higher values give more precise geometry but increase the file size, whereas small values reduce the file size but provide less accurate geometry.
-
+ 
 [TreeQSM]: https://github.com/InverseTampere/TreeQSM
