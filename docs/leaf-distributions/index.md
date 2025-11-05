@@ -47,7 +47,7 @@ Here $\mathrm{B}(\alpha,\beta)  = \int_0^1 x^{\alpha-1} (1-x)^{\beta-1} dx$ is t
 
 The possible parameter values `pLADDd` are:
 
-| Distribution      | `pLADDd`     | Parameter Values                  |
+| Distribution      | `pLADDd`      | Parameter Values                  |
 |-------------------|---------------|----------------------------------|
 | uniform           | -             | -                                |
 | beta              | `[a b]`       | `a`, `b` $> 0$                   |
@@ -85,7 +85,7 @@ For all LADD marginal distributions, it is also possible to define the distribut
 
 ### <a name="qsm-based-note"></a> \* The QSM-based LADD
 
-{. :note}
+{. :note }
 The QSM-based approach distributes the leaves evenly throughout the branch cylinders, emphasizing the leaves towards the tips of the branches, and can be considered as some kind of "automatic" leaf positioning for the QSM. This is useful if the user wants to generate a somewhat realistic foliage and the specific shape of LADD is not important. When using QSM-based approach the `dTypeLADD` field of each of the structural variables have to be set to `'qsm'`. Also, the QSM-based approach is obviously available only when generating foliage on QSMs.
 
 ## Leaf Orientation Distribution (LOD)
