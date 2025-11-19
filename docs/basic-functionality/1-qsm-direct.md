@@ -84,6 +84,7 @@ The optional input options are:
 |`PetioleDirectionDistribution` | Petiole direction distribution function | function handle |
 |`Phyllotaxis`                  | Leaf phyllotaxis pattern struct         | struct          |
 |`IntersectionPrevention`       | Intersection prevention flag            | boolean         |
+|`LeaflessBranchInds`           | Leafless branch indices                 | double          |
 
 ### Petiole direction distribution
 
@@ -96,6 +97,10 @@ A struct containing parameters for a phyllotaxis pattern of the leaves. Override
 ### Intersection prevention
 
 A boolean value for turning intersection prevention of leaves off. Intersection prevention is computationally the heaviest part of the leaf generation, but assures more realistic foliage. If this is not needed, intersection prevention can be turned off. By default intersection prevention is on.
+
+### Leafless branches
+
+A vector specifying the branch indices where leaves should not be generated. This enables leaving certain parts of the QSM leafless (e.g., dead branches). The tree stem (branch index 1) is always excluded from leaf generation.
 
 ## Outputs
 

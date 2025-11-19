@@ -157,6 +157,23 @@ The required fields for the `ParamFunctions` struct are:
 
 `totalLeafArea` is a double-precision variable containing the target total leaf area for the foliage.
 
+### Optional inputs
+
+Optional inputs can be given after the required inputs as name-value pairs. Input called `OptInput` with value `optValue` is given as:
+```matlab
+LeafCylinderLibrary = generate_leaf_cylinder_library(...
+    LibraryDistributions,Nodes,LeafProperties,'OptInput',optValue);
+```
+The optional input options are:
+
+|Name                           |Description              |Type             |
+|:------------------------------|:------------------------|:----------------|
+|`LeaflessBranchInds`           | Leafless branch indices | double          |
+
+#### Leafless branches
+
+A vector specifying the branch indices where leaves should not be generated. This enables leaving certain parts of the QSM leafless (e.g., dead branches). The tree stem (branch index 1) is always excluded from leaf generation.
+
 ### Outputs
 
 #### Leaves
