@@ -161,8 +161,8 @@ The required fields for the `ParamFunctions` struct are:
 
 Optional inputs can be given after the required inputs as name-value pairs. Input called `OptInput` with value `optValue` is given as:
 ```matlab
-LeafCylinderLibrary = generate_leaf_cylinder_library(...
-    LibraryDistributions,Nodes,LeafProperties,'OptInput',optValue);
+Leaves = transform_leaf_cylinders(QSM,LeafCylinderLibrary,...
+    TargetLADD,ParamFunctions,targetLeafArea,'OptInput',optValue);
 ```
 The optional input options are:
 
