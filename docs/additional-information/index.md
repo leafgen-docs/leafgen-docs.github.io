@@ -11,7 +11,7 @@ nav_order: 5
 The leaf base geometry is composed of a collection of triangles that define the leaf surface. The assumptions for the base geometry are:
 
 1. The start point of the leaf (where the petiole connects) is in the origin `[0 0 0]`.
-2. The y-direction `[0 1 0]` is considered as the direction of the leaf (the twig also points in this direction).
+2. The y-direction `[0 1 0]` is considered as the direction of the leaf (the petiole also points in this direction).
 3. The z-direction `[0 0 1]` is considered as the direction of the leaf normal. If the leaf has a three-dimensional structure, the mean surface normal should be pointing in the z-direction.
 
 The leaf base geometry does not need to have any specific surface area, as the base geometry is scaled automatically to follow the LSD.
