@@ -32,6 +32,9 @@ LeafGen uses the QSM format produced by the [TreeQSM] method. Optionally, a QSM 
 | `cylinder.parent`| Cylinder parent cylinders| integer |
 | `cylinder.branch`| Cylinder branch index    | integer |
 
+{: .note }
+In the`cylinder.branch` field, LeafGen assumes the stem cylinders of the QSM to have branch index 1, and the actual branches are indexed with sequential natural numbers starting from 2. It is crucial to correctly mark the stem cylinders with index 1, since during leaf generation, these stem cylinders are automatically left without leaves.
+
 ### Target distributions
 
 The required fields for the `TargetDistributions` struct are:
