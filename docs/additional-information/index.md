@@ -72,12 +72,12 @@ This creates a text file where each row contains the parameters of one leaf: the
 ```
 # Leaf transforms (position, scaling, rotation)
 # id px py pz sx sy sz r11 r12 r13 r21 r22 r23 r31 r32 r33
-1 79.86567 14.81574 1107.96790  1.00000  1.00000  1.00000  0.90490  0.34573  0.24824 -0.42541  0.71632  0.55309  0.01341 -0.60610  0.79528 
-2 81.22222 14.71250 1103.61047  1.00000  1.00000  1.00000 -0.42003 -0.90497 -0.06781  0.79138 -0.40183  0.46071 -0.44418  0.13985  0.88496 
-3 80.62014 14.28959 1105.12195  1.00000  1.00000  1.00000  0.12389  0.77510  0.61957 -0.59716 -0.44043  0.67039  0.79250 -0.45304  0.40829 
+1 79.86567 14.81574 1107.96790  1.28694  1.28694  1.28694  0.90490  0.34573  0.24824 -0.42541  0.71632  0.55309  0.01341 -0.60610  0.79528 
+2 81.22222 14.71250 1103.61047  1.33267  1.33267  1.33267 -0.42003 -0.90497 -0.06781  0.79138 -0.40183  0.46071 -0.44418  0.13985  0.88496 
+3 80.62014 14.28959 1105.12195  1.10094  1.10094  1.10094  0.12389  0.77510  0.61957 -0.59716 -0.44043  0.67039  0.79250 -0.45304  0.40829 
 ...
 ```
-That is, one row contains the index, position vector, scaling vector, and the rotation matrix split into three row vectors. The trasformation of the leaf base geometry (which has the start point at [0 0 0] the leaf tip direction as [0 1 0] and the surfrace normal direction as [0 0 1]) to represent each leaf of the generated foliage can be achieved by translating the leaf start point according to the position vector, scaling the leaf dimensions according to the scaling vector, and rotating the leaf direction and normal with the rotation matrix.
+That is, one row contains the index, position vector, scaling vector, and the rotation matrix split into three row vectors. The trasformation of the leaf base geometry (which has the start point at [0 0 0] the leaf tip direction as [0 1 0] and the surfrace normal direction as [0 0 1]) to represent each leaf of the generated foliage can be achieved by rotating the base geometry vertex points with the rotation matrix, scaling the leaf dimensions according to the scaling vector, and translating the leaf start point according to the position vector.
 
 {: .note }
 Exporting the transforms into txt file does not include the information of the leaf base geometry, only the transforms. For the use in downstream applications, the user can either save the geometry separately, or replace the triangle geomtery used in LeafGen with something more complicated, e.g., giving a more realistic 3D model of a leaf or needle shoot for radiative transfer modelling.
