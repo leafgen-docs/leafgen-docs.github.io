@@ -77,7 +77,7 @@ This creates a text file where each row contains the parameters of one leaf: the
 3 80.62014 14.28959 1105.12195  1.10094  1.10094  1.10094  0.12389  0.77510  0.61957 -0.59716 -0.44043  0.67039  0.79250 -0.45304  0.40829 
 ...
 ```
-That is, one row contains the index, position vector, scaling vector, and the rotation matrix split into three row vectors. The trasformation of the leaf base geometry (which has the start point at [0 0 0] the leaf tip direction as [0 1 0] and the surfrace normal direction as [0 0 1]) to represent each leaf of the generated foliage can be achieved by scaling the base geometry according to the vector of scale factors, rotating the base geometry vertex points with the rotation matrix, and translating the leaf start point according to the position vector.
+That is, one row contains the index, position vector, scaling vector, and the rotation matrix split into three row vectors. The trasformation of the leaf base geometry (which has the start point at [0 0 0] the leaf tip direction as [0 1 0] and the surfrace normal direction as [0 0 1]) to represent each leaf of the generated foliage can be achieved by scaling the base geometry according to the vector of scale factors, rotating the base geometry vertex points with the rotation matrix, and translating the leaf according to the position vector.
 
 {: .note }
 Exporting the transforms into txt file does not include the information of the leaf base geometry, only the transforms. For the use in downstream applications, the user can either save the geometry separately, or replace the triangle geomtery used in LeafGen with something more complicated, e.g., giving a more realistic 3D model of a leaf or needle shoot for radiative transfer modelling.
