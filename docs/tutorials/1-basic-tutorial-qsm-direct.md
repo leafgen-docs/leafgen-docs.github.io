@@ -74,18 +74,18 @@ The LADD marginal distribution types and parameters with respect to the structur
 ```matlab
 % LADD relative height
 TargetDistributions.dTypeLADDh = 'beta';
-TargetDistributions.pLADDh = [22 3];
+TargetDistributions.pLADDh = [6 2];
 
 % LADD relative branch distance
-TargetDistributions.dTypeLADDd = 'weibull';
-TargetDistributions.pLADDd = [3.3 2.8];
+TargetDistributions.dTypeLADDd = 'beta';
+TargetDistributions.pLADDd = [3 1];
 
 % LADD compass direction
 TargetDistributions.dTypeLADDc = 'vonmises';
-TargetDistributions.pLADDc = [5/4*pi 0.1];
+TargetDistributions.pLADDc = [pi/4 0.2];
 ```
 
-Fields `dTypeLADDh` and `pLADDh` define the distribution type and parameters for the LADD marginal distribution on the relative height, in this case a beta distribution with parameters $\alpha$ = 22 and $\beta$ = 3. Similarly, `dTypeLADDd` and `pLADDd` define the relative branch distance marginal distribution as a truncated Weibull distribution with the scale parameter of $\lambda$ = 3.3 and the shape parameter of $k$ = 2.8, and `dTypeLADDc` and `pLADDc` define the compass direction marginal distribution as a von Mises distribution with the mean direction of $\mu = \frac{5\pi}{4}$ and the concentration parameter of $\kappa$ = 0.1.
+Fields `dTypeLADDh` and `pLADDh` define the distribution type and parameters for the LADD marginal distribution on the relative height, in this case a beta distribution with parameters $\alpha$ = 6 and $\beta$ = 2. Similarly, `dTypeLADDd` and `pLADDd` define the relative branch distance marginal distribution as a beta distribution with the parameters $\alpha$ = 3 and $\beta$ = 1, and `dTypeLADDc` and `pLADDc` define the compass direction marginal distribution as a von Mises distribution with the mean direction of $\mu = \frac{\pi}{4}$ and the concentration parameter of $\kappa$ = 0.2.
 
 The LOD marginal distribution types and parameters with respect to the inclination and azimuth angles of leaf normals are defined as:
 
@@ -105,10 +105,10 @@ The LSD type and parameters, similarly to LOD, are defined as:
 
 ```matlab
 TargetDistributions.dTypeLSD = 'normal';
-TargetDistributions.fun_pLSD = @(h,d,c) [0.004 0.00025^2];
+TargetDistributions.fun_pLSD = @(h,d,c) [0.014 0.00025^2];
 ```
 
-The `dTypeLSD` and `fun_pLSD` fields define the distribution type and parameter function for the LSD, in this case a normal distribution with expected value of 40 square centimeters and a variance of 2.5$^2$ square centimeters.
+The `dTypeLSD` and `fun_pLSD` fields define the distribution type and parameter function for the LSD, in this case a normal distribution with expected value of 140 square centimeters and a variance of 2.5$^2$ square centimeters.
 
 {: .note } 
 The parameters of LOD inclination and azimuth angle distributions as well as LSD have to be given as function handles with three variables: relative height, relative branch distance, and compass direction. This holds even in the case they are constant or empty.
@@ -133,10 +133,10 @@ The visualization of the target distributions provides a figure showing the dist
 The target leaf area is set in square meters to a variable named `totalLeafArea`:
 
 ```matlab
-totalLeafArea = 50;
+totalLeafArea = 60;
 ```
 
-The total leaf area can be essentially set to any positive value. In this case a total area of 50 square meters is chosen as the target. Larger values create larger foliage, which also increases the computational cost (mainly caused by the intersection prevention phase). If the value is too large the computation time can become very large as the overcrowding of leaves causes a lot of intersections. It is also possible that for too large total areas the target is not reached.
+The total leaf area can be essentially set to any positive value. In this case a total area of 60 square meters is chosen as the target. Larger values create larger foliage, which also increases the computational cost (mainly caused by the intersection prevention phase). If the value is too large the computation time can become very large as the overcrowding of leaves causes a lot of intersections. It is also possible that for too large total areas the target is not reached.
 
 {: .note }
 A realistic choice for the target leaf area can be derived, for example, by multiplying some realistic leaf area index (LAI) value with the ground projected area of the tree crown.

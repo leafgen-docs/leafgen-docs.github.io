@@ -93,8 +93,8 @@ Nodes.pLODaz1   = [0 pi/2 pi 3*pi/2];
 Nodes.pLODaz2   = [0.01 0.5];
 
 % Leaf size distribution nodes
-Nodes.pLSD1 = [0.002 0.0025];
-Nodes.pLSD2 = [0.003 0.0035];
+Nodes.pLSD1 = [0.010 0.012];
+Nodes.pLSD2 = [0.014 0.016];
 ```
 
 The cylinder attributes to discretize are:
@@ -159,15 +159,15 @@ The LADD marginal distributions are defined with a struct named `TargetLADD`:
 ```matlab
 % LADD relative height
 TargetLADD.dTypeLADDh = 'beta';
-TargetLADD.pLADDh = [22 3];
+TargetLADD.pLADDh = [6 2];
 
 % LADD relative distance along sub-branch
-TargetLADD.dTypeLADDd = 'weibull';
-TargetLADD.pLADDd = [3.3 2.8];
+TargetLADD.dTypeLADDd = 'beta';
+TargetLADD.pLADDd = [3 1];
 
 % LADD compass direction
 TargetLADD.dTypeLADDc = 'vonmises';
-TargetLADD.pLADDc = [5/4*pi 0.1];
+TargetLADD.pLADDc = [pi/4 0.2];
 ```
 
 The parameters for LOD and LSD are defined as functions of the structural variables of the QSM (relative height, relative branch distance, and compass direction). In this tutorial we define them to be stationary for the whole tree:
@@ -180,7 +180,7 @@ ParamFunctions.fun_pLODinc = @(h,d,c) [-1 4];
 ParamFunctions.fun_pLODaz = @(h,d,c) [pi 0.01];
 
 % LSD
-ParamFunctions.fun_pLSD = @(h,d,c) [0.0025, 0.0030];
+ParamFunctions.fun_pLSD = @(h,d,c) [0.012 0.014];
 ```
 
 {: .note }
@@ -191,10 +191,10 @@ Since in this example our parameter functions have constant values for the whole
 The target leaf area is set in square meters to a variable named `totalLeafArea`:
 
 ```matlab
-totalLeafArea = 50;
+totalLeafArea = 60;
 ```
 
-The total leaf area can be essentially set to any positive value. In this case a total area of 50 square meters is chosen as the target. With the library method, the choice of target leaf area essentially has no effect on the speed of the foliage generation on the QSM. However, if the value is very large, the library cylinders might eventually lack leaves to fully reach the target.
+The total leaf area can be essentially set to any positive value. In this case a total area of 60 square meters is chosen as the target. With the library method, the choice of target leaf area essentially has no effect on the speed of the foliage generation on the QSM. However, if the value is very large, the library cylinders might eventually lack leaves to fully reach the target.
 
 {: .note }
 A realistic choice for the target leaf area can be derived, for example, by multiplying some realistic leaf area index (LAI) value with the ground projected area of the tree crown.

@@ -16,15 +16,15 @@ Let's start by first defining a comparison foliage without mixture models. We us
 ```matlab
 % LADD relative height
 TargetDistributions.dTypeLADDh = 'beta';
-TargetDistributions.pLADDh = [22 3];
+TargetDistributions.pLADDh = [6 2];
 
 % LADD relative branch distance
-TargetDistributions.dTypeLADDd = 'weibull';
-TargetDistributions.pLADDd = [3.3 2.8];
+TargetDistributions.dTypeLADDd = 'beta';
+TargetDistributions.pLADDd = [3 1];
 
 % LADD compass direction
 TargetDistributions.dTypeLADDc = 'vonmises';
-TargetDistributions.pLADDc = [5/4*pi 0.1];
+TargetDistributions.pLADDc = [pi/4 0.2];
 
 % LOD inclination angle
 TargetDistributions.dTypeLODinc = 'dewit';
@@ -36,10 +36,13 @@ TargetDistributions.fun_pLODaz = @(h,d,c) [];
 
 % LSD
 TargetDistributions.dTypeLSD = 'normal';
-TargetDistributions.fun_pLSD = @(h,d,c) [0.004 0.00025^2];
+TargetDistributions.fun_pLSD = @(h,d,c) [0.014 0.00025^2];
 
 % Visualize the target distributions
 visualize_target_distributions(TargetDistributions,[0 0 0]);
+
+% Set the target leaf area
+totalLeafArea = 60;
 ```
 
 The visualization shows us the following distributions:
@@ -53,15 +56,15 @@ Now let us define mixture models for the LADD marginal distributions. These can 
 ```matlab
 % LADD relative height
 TargetDistributions.dTypeLADDh = 'betamixture';
-TargetDistributions.pLADDh = [22 3 8 12 0.85];
+TargetDistributions.pLADDh = [6 2 11 12 0.7];
 
 % LADD relative branch distance
-TargetDistributions.dTypeLADDd = 'weibullmixture';
-TargetDistributions.pLADDd = [3.3 2.8 1.1 6 0.3];
+TargetDistributions.dTypeLADDd = 'betamixture';
+TargetDistributions.pLADDd = [3 1 5 2 0.7];
 
 % LADD compass direction
 TargetDistributions.dTypeLADDc = 'vonmisesmixture';
-TargetDistributions.pLADDc = [5/4*pi 1.1 1/4*pi 1.1 0.5];
+TargetDistributions.pLADDc = [0.0 1.0 (4/5)*pi 1.0 0.75];
 
 % LOD inclination angle
 TargetDistributions.dTypeLODinc = 'dewit';
@@ -73,13 +76,16 @@ TargetDistributions.fun_pLODaz = @(h,d,c) [];
 
 % LSD
 TargetDistributions.dTypeLSD = 'normal';
-TargetDistributions.fun_pLSD = @(h,d,c) [0.004 0.00025^2];
+TargetDistributions.fun_pLSD = @(h,d,c) [0.014 0.00025^2];
 
 % Visualize the target distributions
 visualize_target_distributions(TargetDistributions,[0 0 0]);
+
+% Set the target leaf area
+totalLeafArea = 80;
 ```
 
-In this definition for heightwise LADD we use a mixture of beta distribution with the first one having parameters $\alpha = 22$ and $\beta = 3$, the second one having parameters $\alpha = 8$ and $\beta = 12$, and the weighting factor of $0.85$ on the first distribution (and thus weight $0.15$ on the second). The distancewise LADD uses a mixture of two truncated Weibull distributions with the first one having parameters $\lambda = 3.3$ and $k = 2.8$, the second one having parameters $\lambda = 1.1$ and $k = 6$, and the weighting factor being $0.3$ on the first distribution (i.e. $0.7$ weight on the second). The compass direction LADD has a mixture of two von Mises distributions with the first one having parameters $\mu = \frac{5}{4} \pi$ and $\kappa = 1.1$, the second one having $\mu = \frac{1}{4} \pi$ and $\kappa = 1.1$, and equal weight $0.5$ on each of the distributions.
+In this definition for heightwise LADD we use a mixture of beta distribution with the first one having parameters $\alpha = 6$ and $\beta = 2$, the second one having parameters $\alpha = 11$ and $\beta = 12$, and the weighting factor of $0.7$ on the first distribution (and thus weight $0.3$ on the second). The distancewise LADD uses a mixture of two beta distributions with the first one having parameters $\alpha = 3$ and $\beta = 1$, the second one having parameters $\alpha = 5$ and $\beta = 2$, and the weighting factor being $0.7$ on the first distribution (i.e. $0.3$ weight on the second). The compass direction LADD has a mixture of two von Mises distributions with the first one having parameters $\mu = 0$ and $\kappa = 1.0$, the second one having $\mu = \frac{4}{5} \pi$ and $\kappa = 1.0$, and weight $0.75$ on the first distribution (and $0.25$ on the second). Additionally, we increase the total leaf area from 60 to 80 square meters, since the mixture model LADD assigns leaf area also to the lower branches, which are mainly leafless in the basic tutorial example.
 
 With these definitions, we get the following visualization:
 

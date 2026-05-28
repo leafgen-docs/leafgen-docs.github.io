@@ -239,15 +239,15 @@ Next we apply the above three approaches to foliage generation on a QSM. First w
 ```matlab
 % LADD relative height
 TargetDistributions.dTypeLADDh = 'beta';
-TargetDistributions.pLADDh = [22 3];
+TargetDistributions.pLADDh = [6 2];
 
 % LADD relative branch distance
-TargetDistributions.dTypeLADDd = 'weibull';
-TargetDistributions.pLADDd = [3.3 2.8];
+TargetDistributions.dTypeLADDd = 'beta';
+TargetDistributions.pLADDd = [3 1];
 
 % LADD compass direction
 TargetDistributions.dTypeLADDc = 'vonmises';
-TargetDistributions.pLADDc = [5/4*pi 0.1];
+TargetDistributions.pLADDc = [pi/4 0.2];
 
 % Load QSM
 filename = "example-data/ExampleQSM.mat";
@@ -258,7 +258,7 @@ The we define the target leaf area and generate three different foliage: one wit
 
 ```matlab
 % Define target leaf area
-totalLeafArea = 30;
+totalLeafArea = 60;
 
 % Uniform leaf direction sampling
 [Leaves4,QSMbc4] = generate_foliage_qsm_direct(QSM, ...
@@ -309,5 +309,5 @@ This provides us with the following visualization.
 <img src="/assets/images/petiole-direction-and-phyllotaxis-visualization.png" width="500" height="500" />
 
 {: .warning}
-When using a phyllotaxis pattern, sometimes the target leaf area cannot be reached as the pattern limits the amount of leaf area that can be generated on a cylinder. Thus, if the LADD determines a large amount of leaf area for a single cylinder, this cannot be realized and the target is not reached.
+When using a phyllotaxis pattern, sometimes the target leaf area cannot be reached as the pattern limits the amount of leaf area that can be generated on a cylinder. Thus, if the LADD determines a large amount of leaf area for a single cylinder, this cannot be realized and the target is not reached. In the above example, the tree with the phyllotaxis pattern reached total leaf area of only 46 square meters instead of the target of 60 square meters.
 
